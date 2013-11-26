@@ -8,6 +8,8 @@ import org.elasticsearch.common.netty.channel.Channel;
 import org.elasticsearch.rest.RestChannel;
 
 public class NettyUtils {
+    private static final String CHANNEL_FIELD_NAME = "channel";
+
     private static final ESLogger logger = Loggers.getLogger(NettyUtils.class);
 
     private static Field channelField;
@@ -18,7 +20,7 @@ public class NettyUtils {
     public static Channel getChannel(final RestChannel channel) {
         try {
             if (channelField == null) {
-                channelField = channel.getClass().getField("channel");
+                channelField = channel.getClass().getDeclaredField(CHANNEL_FIELD_NAME);
                 channelField.setAccessible(true);
             }
             return (Channel) channelField.get(channel);
