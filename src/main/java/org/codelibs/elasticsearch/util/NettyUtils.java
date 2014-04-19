@@ -7,7 +7,7 @@ import org.elasticsearch.common.logging.Loggers;
 import org.elasticsearch.common.netty.channel.Channel;
 import org.elasticsearch.rest.RestChannel;
 
-public class NettyUtils {
+public final class NettyUtils {
     private static final String CHANNEL_FIELD_NAME = "channel";
 
     private static final ESLogger logger = Loggers.getLogger(NettyUtils.class);

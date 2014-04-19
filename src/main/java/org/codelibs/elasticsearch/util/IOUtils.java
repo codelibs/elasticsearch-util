@@ -3,7 +3,7 @@ package org.codelibs.elasticsearch.util;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class IOUtils {
+public final class IOUtils {
     private IOUtils() {
     }
 
