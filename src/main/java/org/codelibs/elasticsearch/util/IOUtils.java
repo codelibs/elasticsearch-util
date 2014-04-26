@@ -1,16 +1,16 @@
 package org.codelibs.elasticsearch.util;
 
+import java.io.Closeable;
 import java.io.IOException;
-import java.io.InputStream;
 
-public final class IOUtils {
+public class IOUtils {
     private IOUtils() {
     }
 
-    public static void closeQuietly(final InputStream is) {
-        if (is != null) {
+    public static void closeQuietly(final Closeable closeable) {
+        if (closeable != null) {
             try {
-                is.close();
+                closeable.close();
             } catch (final IOException e) {
             }
         }
