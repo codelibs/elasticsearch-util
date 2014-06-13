@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.util;
+package org.codelibs.elasticsearch.util.lang;
 
 import java.util.Collection;
 
@@ -14,16 +14,16 @@ public final class StringUtils {
     }
 
     /**
-    * Check if a collection of a string is empty.
-    * 
-    * @param c
-    * @return
-    */
-    public static boolean isEmpty(Collection<String> c) {
+     * Check if a collection of a string is empty.
+     *
+     * @param c
+     * @return
+     */
+    public static boolean isEmpty(final Collection<String> c) {
         if (c == null || c.isEmpty()) {
             return false;
         }
-        for (String text : c) {
+        for (final String text : c) {
             if (isNotEmpty(text)) {
                 return false;
             }
@@ -33,25 +33,25 @@ public final class StringUtils {
 
     /**
      * Check if a collection of a string is not empty.
-     * 
+     *
      * @param c
      * @return
      */
-    public static boolean isNotEmpty(Collection<String> c) {
+    public static boolean isNotEmpty(final Collection<String> c) {
         return !isEmpty(c);
     }
 
     /**
      * Check if a collection of a string is blank.
-     * 
+     *
      * @param c
      * @return
      */
-    public static boolean isBlank(Collection<String> c) {
+    public static boolean isBlank(final Collection<String> c) {
         if (c == null || c.isEmpty()) {
             return false;
         }
-        for (String text : c) {
+        for (final String text : c) {
             if (isNotBlank(text)) {
                 return false;
             }
@@ -61,17 +61,17 @@ public final class StringUtils {
 
     /**
      * Check if a collection of a string is not blank.
-     * 
+     *
      * @param c
      * @return
      */
-    public static boolean isNotBlank(Collection<String> c) {
+    public static boolean isNotBlank(final Collection<String> c) {
         return !isBlank(c);
     }
 
     /**
      * Check if a string is empty.
-     * 
+     *
      * @param text
      * @return
      */
@@ -81,7 +81,7 @@ public final class StringUtils {
 
     /**
      * Check if a string is not empty.
-     * 
+     *
      * @param text
      * @return
      */
@@ -91,7 +91,7 @@ public final class StringUtils {
 
     /**
      * Check if a string is blank.
-     * 
+     *
      * @param str
      * @return
      */
@@ -109,7 +109,7 @@ public final class StringUtils {
 
     /**
      * Check if a string is not blank.
-     * 
+     *
      * @param str
      * @return
      */

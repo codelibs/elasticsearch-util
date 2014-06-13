@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.util;
+package org.codelibs.elasticsearch.util.action;
 
 import org.elasticsearch.action.ActionListener;
 
@@ -12,12 +12,12 @@ public final class ListenerUtils {
         return new ActionListener<Response>() {
 
             @Override
-            public void onResponse(Response response) {
+            public void onResponse(final Response response) {
                 responseListener.onResponse(response);
             }
 
             @Override
-            public void onFailure(Throwable e) {
+            public void onFailure(final Throwable e) {
                 failureListener.onFailure(e);
             }
         };

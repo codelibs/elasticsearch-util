@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.util;
+package org.codelibs.elasticsearch.util.settings;
 
 import java.util.Map;
 

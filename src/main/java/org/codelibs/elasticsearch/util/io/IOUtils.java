@@ -1,9 +1,9 @@
-package org.codelibs.elasticsearch.util;
+package org.codelibs.elasticsearch.util.io;
 
 import java.io.Closeable;
 import java.io.IOException;
 
-public class IOUtils {
+public final class IOUtils {
     private IOUtils() {
     }
 

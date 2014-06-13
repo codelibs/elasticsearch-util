@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.util;
+package org.codelibs.elasticsearch.util.netty;
 
 import java.lang.reflect.Field;
 
@@ -20,7 +20,8 @@ public final class NettyUtils {
     public static Channel getChannel(final RestChannel channel) {
         try {
             if (channelField == null) {
-                channelField = channel.getClass().getDeclaredField(CHANNEL_FIELD_NAME);
+                channelField = channel.getClass().getDeclaredField(
+                        CHANNEL_FIELD_NAME);
                 channelField.setAccessible(true);
             }
             return (Channel) channelField.get(channel);
