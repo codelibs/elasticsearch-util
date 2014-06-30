@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.codelibs</groupId>
 	<artifactId>elasticsearch-util</artifactId>
-	<version>0.3.0</version>
+	<version>0.3.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Utility classes for Elasticsearch</name>
 	<description>This provides useful classes for Elasticsearch plugin development.</description>
